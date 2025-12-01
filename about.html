@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Taniti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><i class="fa-solid fa-umbrella-beach"></i> Taniti</div>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-accent nav-cta">Book Now</a></li>
+      </ul>
+
+      <form class="nav-search" action="attractions.html" method="get" role="search">
+        <input class="search-input" name="q" type="search" placeholder="Search activities (e.g. snorkeling)" aria-label="Search activities">
+        <button class="btn btn-secondary search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="search-toggle" onclick="toggleSearch()" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <h2 class="section-title">About Taniti</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center;">Taniti is a small Pacific island known for white-sand beaches, lush rainforests, and a warm, welcoming culture. The island's economy depends on tourism; this site helps visitors plan short stopovers and longer stays with curated activities and clear logistics.</p>
+
+    <div style="margin-top: 30px;" class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Beach">
+        <div class="card-body">
+          <h3>Geography</h3>
+          <p>White-sand bays, volcanic interior, and coastal reefs make Taniti ideal for both relaxation and adventure.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Market">
+        <div class="card-body">
+          <h3>Culture</h3>
+          <p>Local artisan markets, traditional music, and island cuisine are part of the visitor experience.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=800&auto=format&fit=crop" alt="Map">
+        <div class="card-body">
+          <h3>Visitor Info</h3>
+          <p>Common questions about currency, power, and safety are available on the Plan page.</p>
+          <a class="btn btn-secondary" href="search.html">Plan Your Trip</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>Visit Taniti</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

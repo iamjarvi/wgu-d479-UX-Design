@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan Your Trip — Taniti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><i class="fa-solid fa-umbrella-beach"></i> Taniti</div>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="plan.html" class="active">Plan</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-accent nav-cta">Book Now</a></li>
+      </ul>
+
+      <form class="nav-search" action="attractions.html" method="get" role="search">
+        <input class="search-input" name="q" type="search" placeholder="Search activities" aria-label="Search activities">
+        <button class="btn btn-secondary search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="search-toggle" onclick="toggleSearch()" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <h2 class="section-title">Plan Your Trip</h2>
+
+    <div class="alert-banner">
+      <i class="fa-solid fa-circle-exclamation fa-2x"></i>
+      <div>
+        <strong>Holiday Alert:</strong> Many attractions and restaurants are closed on National Holidays. Please check the calendar before booking.
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fa-solid fa-bus"></i>
+        <h3>Transportation</h3>
+        <p style="text-align: left; font-size: 0.9rem;">
+          <strong>Public Bus:</strong> 5am - 11pm Daily (Taniti City)<br>
+          <strong>Taxis:</strong> Available in City Center<br>
+          <strong>Rentals:</strong> Cars near Airport, Bikes (Helmets required)
+        </p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-plug"></i>
+        <h3>Essentials</h3>
+        <p style="text-align: left; font-size: 0.9rem;">
+          <strong>Power:</strong> 120 Volts (US Standard)<br>
+          <strong>Currency:</strong> US Dollar (Euros/Yen accepted)<br>
+          <strong>Language:</strong> English spoken in tourist areas
+        </p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-kit-medical"></i>
+        <h3>Health & Safety</h3>
+        <p style="text-align: left; font-size: 0.9rem;">
+          <strong>Hospital:</strong> 1 Main Hospital, several clinics<br>
+          <strong>Crime:</strong> Violent crime is rare. Watch for pickpockets in crowded areas.<br>
+          <strong>Alcohol:</strong> Legal age 18. No sales Midnight-9am.
+        </p>
+      </div>
+    </div>
+
+    <!-- Curated Packages CTA -->
+    <div style="background: linear-gradient(135deg, var(--primary), var(--success)); color: white; padding: 40px; border-radius: 12px; text-align: center; margin: 50px 0;">
+      <h3 style="color: white; margin-bottom: 15px; font-size: 1.8rem;">Looking for a Complete Experience?</h3>
+      <p style="margin-bottom: 20px; font-size: 1.1rem;">Check out our curated packages that combine activities, transport, and dining for a hassle-free visit.</p>
+      <a href="booking.html" class="btn btn-accent" style="font-size: 1.1rem;">View Curated Packages</a>
+    </div>
+
+    <!-- Local Eats Section -->
+    <h2 class="section-title" style="margin-top: 60px;">Local Eats</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="Fresh Seafood">
+        <div class="card-body">
+          <h3>Fresh Seafood</h3>
+          <p>5 local fish restaurants serving the daily catch with traditional island preparations.</p>
+          <div class="card-meta"><i class="fa-solid fa-fish"></i> Fresh Daily | <i class="fa-solid fa-dollar-sign"></i> $$</div>
+          <a class="btn btn-secondary" href="booking.html">Reserve Table</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" alt="Pan-Asian Cuisine">
+        <div class="card-body">
+          <h3>Pan-Asian Cuisine</h3>
+          <p>2 specialty restaurants offering diverse Asian flavors with local ingredients.</p>
+          <div class="card-meta"><i class="fa-solid fa-bowl-rice"></i> Fusion | <i class="fa-solid fa-dollar-sign"></i> $$</div>
+          <a class="btn btn-secondary" href="booking.html">Reserve Table</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" alt="American Dining">
+        <div class="card-body">
+          <h3>American Dining</h3>
+          <p>3 restaurants serving familiar American favorites for comfort food cravings.</p>
+          <div class="card-meta"><i class="fa-solid fa-burger"></i> Classic | <i class="fa-solid fa-dollar-sign"></i> $-$$</div>
+          <a class="btn btn-secondary" href="booking.html">Reserve Table</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lodging Options Section -->
+    <h2 class="section-title" style="margin-top: 60px;">Lodging Options</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Resort">
+        <div class="card-body">
+          <h3>Luxury Resorts</h3>
+          <p>4-star accommodations with ocean views, pools, and full-service amenities.</p>
+          <div class="card-meta"><i class="fa-solid fa-star"></i> Premium | <i class="fa-solid fa-dollar-sign"></i> $$$</div>
+          <a class="btn btn-secondary" href="booking.html">Check Availability</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop" alt="B&B">
+        <div class="card-body">
+          <h3>Bed & Breakfasts</h3>
+          <p>Cozy, family-owned B&Bs offering personalized service and local charm.</p>
+          <div class="card-meta"><i class="fa-solid fa-mug-hot"></i> Intimate | <i class="fa-solid fa-dollar-sign"></i> $$</div>
+          <a class="btn btn-secondary" href="booking.html">Check Availability</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=800&auto=format&fit=crop" alt="Hostels">
+        <div class="card-body">
+          <h3>Hostels & Budget</h3>
+          <p>Affordable shared accommodations perfect for solo travelers and backpackers.</p>
+          <div class="card-meta"><i class="fa-solid fa-bed"></i> Budget | <i class="fa-solid fa-dollar-sign"></i> $</div>
+          <a class="btn btn-secondary" href="booking.html">Check Availability</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>Visit Taniti</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

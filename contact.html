@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Taniti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><i class="fa-solid fa-umbrella-beach"></i> Taniti</div>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-accent nav-cta">Book Now</a></li>
+      </ul>
+
+      <form class="nav-search" action="attractions.html" method="get" role="search">
+        <input class="search-input" name="q" type="search" placeholder="Search activities (e.g. snorkeling)" aria-label="Search activities">
+        <button class="btn btn-secondary search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="search-toggle" onclick="toggleSearch()" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">For assistance with bookings, accessibility, or travel advice please reach out to Taniti Tourism Board.</p>
+
+    <div style="max-width:700px; margin:30px auto;">
+      <form onsubmit="event.preventDefault(); alert('Thanks — we received your message.');">
+        <label>Name</label>
+        <input type="text" required placeholder="Your name">
+        <label>Email</label>
+        <input type="email" required placeholder="you@example.com">
+        <label>Message</label>
+        <textarea style="padding:12px; border-radius:6px; border:1px solid #ddd; min-height:120px;"></textarea>
+        <button class="btn btn-primary" style="margin-top:10px;">Send Message</button>
+      </form>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+      <p><strong>Address:</strong> Taniti Tourism Board HQ, Merriton Landing</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>Visit Taniti</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

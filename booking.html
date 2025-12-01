@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking — Taniti</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><i class="fa-solid fa-umbrella-beach"></i> Taniti</div>
+      <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-accent nav-cta active">Book Now</a></li>
+      </ul>
+
+      <form class="nav-search" action="attractions.html" method="get" role="search">
+        <input class="search-input" name="q" type="search" placeholder="Search activities (e.g. snorkeling)" aria-label="Search activities">
+        <button class="btn btn-secondary search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" class="search-toggle" onclick="toggleSearch()" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <div class="booking-hero">
+      <h2>Book Your Taniti Experience</h2>
+      <p>Select a curated package or customize your own itinerary.</p>
+    </div>
+
+    <div class="package-list">
+      <div class="package-item">
+        <div style="font-size: 3rem; color: var(--secondary); padding: 0 20px;"><i class="fa-solid fa-ship"></i></div>
+        <div class="package-info">
+          <h3>The "Cruise Stopover" Package</h3>
+          <p>Perfect for 2-day visitors! Includes port pickup, beach transport, history museum tickets, and a family lunch.</p>
+          <small>Best for Families | 6-8 Hours</small>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">$120</div>
+          <small>per person</small>
+          <br>
+          <button class="btn btn-primary" style="margin-top: 10px;" onclick="openModal('Cruise Stopover')">Book Package</button>
+        </div>
+      </div>
+
+      <div class="package-item">
+        <div style="font-size: 3rem; color: var(--success); padding: 0 20px;"><i class="fa-solid fa-tree"></i></div>
+        <div class="package-info">
+          <h3>Rainforest Adventure</h3>
+          <p>Zip-lining, hiking, and guided nature tour.</p>
+          <small>Best for Thrill Seekers | 4 Hours</small>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">$95</div>
+          <small>per person</small>
+          <br>
+          <button class="btn btn-primary" style="margin-top: 10px;" onclick="openModal('Rainforest Adventure')">Book Package</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Links Section -->
+    <div style="margin-top: 60px;">
+      <h2 class="section-title">Book Directly with Our Partners</h2>
+      <p style="text-align: center; margin-bottom: 30px;">Prefer to book directly? Visit our trusted partner sites for lodging, activities, and dining.</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-solid fa-hotel" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3>Lodging Partners</h3>
+            <p>Book hotels, resorts, and B&Bs directly.</p>
+            <a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Booking.com <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-solid fa-person-hiking" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3>Activity Partners</h3>
+            <p>Reserve tours, excursions, and experiences.</p>
+            <a href="https://www.viator.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Viator <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-solid fa-utensils" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3>Dining Reservations</h3>
+            <p>Reserve tables at local restaurants.</p>
+            <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">OpenTable <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle" style="margin-bottom: 20px;">Confirm Booking</h2>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your booking request has been sent. You will receive an email confirmation shortly.'); closeModal();">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Jim Smith" required>
+
+          <label>Date of Visit</label>
+          <input type="date" required>
+
+          <label>Guests</label>
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected>5</option>
+            <option>6+</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Confirm & Pay</button>
+        </form>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <h3>Visit Taniti</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/app.js" defer></script>
+</body>
+</html>

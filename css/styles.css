@@ -1,0 +1,326 @@
+/* Shared styles extracted from single-file prototype */
+
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --primary: #006D77;      /* Ocean Deep */
+    --secondary: #FF9F1C;    /* Coral Reef */
+    --accent: #FFD166;       /* Beach Sand */
+    --bg-light: #F6F6F6;     /* Cloud White */
+    --text-dark: #293241;    /* Volcanic Rock */
+    --success: #83C5BE;      /* Palm Frond */
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Baloo 2', cursive;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* --- UTILITY CLASSES --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.nav-cta {
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0.95;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+/* --- NAVIGATION (Mobile Responsive) --- */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    gap: 20px;
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: var(--secondary);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+/* --- PAGE CONTENT SECTIONS --- */
+main { flex: 1; }
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(0, 109, 119, 0.7), rgba(0, 109, 119, 0.4)), url(../assets/island-1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Mobile friendly height */
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- CARDS (Attractions/Lodging) --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover { transform: translateY(-5px); }
+.card img { height: 200px; width: 100%; object-fit: cover; }
+.card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card h3 { margin-bottom: 10px; font-size: 1.5rem; }
+.card p { font-size: 0.95rem; color: #555; margin-bottom: 15px; flex-grow: 1; }
+.card-meta { font-size: 0.85rem; color: var(--primary); margin-bottom: 15px; font-weight: 600; }
+
+/* --- LOGISTICS (Feedback #3 Implementation) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--secondary);
+}
+
+.info-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+.info-card h3 { margin-bottom: 10px; }
+
+.alert-banner {
+    background-color: #FFF3CD;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #FF9F1C;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- BOOKING (Feedback #1 Implementation) --- */
+.booking-hero { background-color: var(--primary); color: white; padding: 40px; border-radius: 12px; text-align: center; margin-bottom: 40px; }
+.booking-hero h2 { color: white; }
+.package-list { display: flex; flex-direction: column; gap: 20px; }
+.package-item { background: var(--white); padding: 20px; border-radius: 12px; box-shadow: var(--shadow); display: flex; flex-wrap: wrap; align-items: center; gap: 20px; border-left: 5px solid var(--success); }
+.package-info { flex: 1; }
+
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center; }
+.modal-content { background-color: white; padding: 30px; border-radius: 12px; width: 90%; max-width: 500px; position: relative; }
+.close-modal { position: absolute; right: 20px; top: 15px; font-size: 1.5rem; cursor: pointer; }
+
+form { display: flex; flex-direction: column; gap: 15px; }
+input, select { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
+
+/* --- FOOTER --- */
+footer { background-color: var(--text-dark); color: var(--white); padding: 40px 0; margin-top: auto; text-align: center; }
+.social-icons { margin-top: 15px; font-size: 1.5rem; }
+.social-icons a { margin: 0 10px; }
+
+/* --- MOBILE MEDIA QUERIES (Feedback #2 Implementation) --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background-color: var(--white); padding: 20px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); text-align: center; }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .section-title { font-size: 2rem; }
+    .package-item { flex-direction: column; text-align: center; }
+}
+
+/* --- NAVBAR SEARCH --- */
+.nav-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+.nav-search .search-input {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-width: 220px;
+}
+.nav-search .search-btn {
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+/* Mobile: hide input, show toggle button */
+@media (max-width: 768px) {
+    .nav-search .search-input { display: none; }
+    .nav-search .search-btn { display: none; }
+    .nav-search .search-toggle { display: inline-flex; background: none; border: none; font-size: 1.25rem; color: var(--primary); }
+    .nav-search.active .search-input { display: inline-block; width: 60%; }
+    .nav-search.active .search-btn { display: inline-block; }
+}
+
+/* Desktop: hide the small toggle */
+.nav-search .search-toggle { display: none; }
+
+/* --- TESTIMONIALS --- */
+.testimonials-section {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--secondary);
+}
+
+.testimonial-stars {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary);
+    text-align: right;
+}

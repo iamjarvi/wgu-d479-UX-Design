@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Taniti | Tropical Paradise</title>
+    
+    <!-- Fonts: Baloo 2 for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fa-solid fa-umbrella-beach"></i> Taniti
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+                    <li><a href="plan.html" class="nav-link">Plan</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="booking.html" class="btn btn-accent nav-cta">Book Now</a></li>
+                </ul>
+
+                <form class="nav-search" action="attractions.html" method="get" role="search">
+                    <input class="search-input" name="q" type="search" placeholder="Search activities (e.g. snorkeling)" aria-label="Search activities">
+                    <button class="btn btn-secondary search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="button" class="search-toggle" onclick="toggleSearch()" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <div class="hero">
+                <div class="hero-content container">
+                    <h1>Experience the Unforgettable</h1>
+                    <p>From volcanic peaks to coral reefs, discover the magic of Taniti.</p>
+                    <a class="btn btn-secondary" href="booking.html">Book Your Adventure</a>
+                </div>
+            </div>
+            
+            <div class="container">
+                <h2 class="section-title">Why Visit Taniti?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fa-solid fa-water"></i>
+                        <h3>Pristine Beaches</h3>
+                        <p>Relax on the white sands of Yellow Leaf Bay.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-person-hiking"></i>
+                        <h3>Rainforests</h3>
+                        <p>Explore lush trails and hidden waterfalls.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Local Cuisine</h3>
+                        <p>Taste fresh seafood and pan-Asian delights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Your Stay Section -->
+        <section class="container" style="margin: 80px auto;">
+            <h2 class="section-title">Plan Your Stay</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Everything you need for an unforgettable visit to Taniti.</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-map-location-dot" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Explore Attractions</h3>
+                    <p>Discover snorkeling, volcano hikes, beaches, and local culture.</p>
+                    <a class="btn btn-primary" href="attractions.html" style="margin-top: 15px;">View Activities</a>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-suitcase" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Plan Your Trip</h3>
+                    <p>Transportation, lodging, dining, and essential travel information.</p>
+                    <a class="btn btn-primary" href="plan.html" style="margin-top: 15px;">Start Planning</a>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-calendar-check" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h3>Book Your Experience</h3>
+                    <p>Curated packages and direct booking for a hassle-free visit.</p>
+                    <a class="btn btn-primary" href="booking.html" style="margin-top: 15px;">View Packages</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Visitors Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Our family had an amazing time! The cruise stopover package was perfect for our 2-day visit. Everything was organized and the kids loved the beach."</p>
+                        <p class="testimonial-author">— Jim S., USA</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The volcano hike was breathtaking! Our guide was knowledgeable and the views were worth every step."</p>
+                        <p class="testimonial-author">— Maria G., Spain</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Taniti exceeded all expectations. Beautiful beaches, friendly locals, and amazing food. We'll definitely be back!"</p>
+                        <p class="testimonial-author">— David & Sarah T., Canada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3>Visit Taniti</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
